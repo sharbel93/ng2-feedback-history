@@ -1,0 +1,39 @@
+{
+	"name": "ng2-feedback-history",
+	"version": "0.0.0",
+	"description": "virtual scrollmessages based on slack messages history ",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"typings": "./dist/index.d.ts",
+	"keywords": [
+		"angular",
+		"angular2",
+		"angular 2"
+	],
+	"author": {
+		"name": "sharbel chris",
+		"email": "sharbel.cosa@gmail.com"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sharbel93/angular-message-history-module.git"
+	},
+	"homepage": "https://github.com/sharbel93/angular-message-history-module",
+	"bugs": {
+		"url": "https://github.com/sharbel93/angular-message-history-module/issues"
+	},
+	"peerDependencies": {
+		"reflect-metadata": "^0.1.10",
+		"@angular/common": "^4.4.4",
+		"@angular/core": "^4.4.4",
+		"@angular/http": "^4.4.4",
+		"@angular/platform-browser": "^4.4.4",
+		"angular2-markdown": "^1.6.0",
+		"angular2-moment": "^1.7.0 ",
+		"angular2-virtual-scroll": "^0.2.2",
+		"font-awesome": "^4.7.0",
+		"rxjs": "^5.4.3",
+		"zone.js": "^0.8.17"
+	}
+}

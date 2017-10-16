@@ -1,0 +1,40 @@
+
+Thumbs.db
+.DS_Store
+*.yml
+!*.d.ts
+src/app/app.*
+src/public
+src/shims
+src/app.scss
+src/main.ts
+src/polyfills.ts
+src/vendor.ts
+*.spec.*
+*.e2e.*
+CONTRIBUTING.md
+karma-shim.js
+karma.conf.js
+protractor.conf.js
+tsconfig.json
+tslint.json
+typedoc.json
+typings.json
+typings
+webpack.config.js
+.travis.yml
+.jshintrc
+.editorconfig
+
+# Node
+node_modules
+npm-debug.log
+
+# VS Code
+.vscode/
+
+# Temporary files
+tmp
+
+# Library files
+src/

@@ -1,14 +1,20 @@
 {
-  "name": "feedback-history",
+  "name": "ng2-feedback-history",
   "version": "0.0.0",
   "license": "MIT",
+  "description": "virtual scrollmessages based on slack messages history",
+  "keywords": [
+    "angular 2",
+    "scroll"
+  ],
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "clean": "rimraf .tmp && rimraf dist",
+    "transpile": "ngc",
+    "package": "rollup -c",
+    "minify": "./node_modules/uglify-js/bin/uglifyjs dist/bundles/angular-message-history-module.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/angular-message-history-module.umd.min.js",
+    "copy": "copyfiles LICENSE README.md dist cpx './package-dist.json' dist && renamer --find 'package-dist.json' --replace 'package.json' ./dist/*",
+    "build": "npm run clean && npm run transpile && npm run package && npm run minify && npm run copy"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +27,13 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
+    "angular2-markdown": "^1.6.0",
+    "angular2-moment": "^1.7.0",
+    "angular2-virtual-scroll": "^0.3.1",
+    "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    "fontawesome": "^4.7.2",
+    "moment": "^2.19.1",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },
@@ -33,6 +45,8 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "~3.2.0",
+    "copyfiles": "^1.2.0",
+    "cpx": "^1.5.0",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
@@ -42,8 +56,12 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
+    "renamer": "^0.6.1",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.50.0",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
-    "typescript": "~2.3.3"
+    "typescript": "~2.3.3",
+    "uglify-js": "^3.1.4"
   }
 }
